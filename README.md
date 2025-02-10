@@ -1,3 +1,5 @@
+Strucuture
+```
 frontend/
 ├── public/
 ├── src/
@@ -65,3 +67,4 @@ backend/
 ├── package.json
 ├── tsconfig.json
 └── .env
+```
