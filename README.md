@@ -59,7 +59,6 @@ backend/
 │   │   ├── apiError.ts       # Классы ошибок API
 │   │   └── logger.ts         # Логирование
 │   └── app.ts                # Основной файл приложения
-├── migrations/               # Миграции базы данных (TypeORM)
 ├── package.json
 ├── tsconfig.json
 └── .env
