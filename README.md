@@ -36,7 +36,7 @@ frontend/
 backend/
 ├── src/
 │   ├── config/
-│   │   ├── db.ts            # Конфигурация PostgreSQL (TypeORM)
+│   │   ├── db.ts            # Конфигурация PostgreSQL 
 │   │   └── env.ts           # Обработка переменных окружения
 │   ├── controllers/
 │   │   ├── auth.controller.ts  # Контроллеры аутентификации
@@ -45,10 +45,6 @@ backend/
 │   ├── middleware/
 │   │   ├── auth.middleware.ts   # JWT-аутентификация
 │   │   └── error.middleware.ts  # Обработка ошибок
-│   ├── models/
-│   │   ├── User.entity.ts    # Сущность пользователя (TypeORM)
-│   │   ├── Product.entity.ts # Сущность товара
-│   │   └── Order.entity.ts   # Сущность заказа
 │   ├── routes/
 │   │   ├── auth.routes.ts    # Маршруты аутентификации
 │   │   ├── product.routes.ts # Маршруты товаров
