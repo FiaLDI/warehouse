@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import process from "process";
+import routerProduct from "./routes/product.routes";
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -14,9 +15,13 @@ app.use(
         credentials: true,
     }),
 );
+// Отдача статических файлов
+app.use('/api/files', express.static('src/assets'));
+
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(router);
+app.use(routerProduct);
 
 // Start the server
 app.listen(PORT, () => {

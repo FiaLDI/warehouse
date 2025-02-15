@@ -3,13 +3,14 @@ import { useSelector } from "react-redux";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import { selectAuth } from "../features/auth/authSelectors";
 import { Dashboard } from "../components/DashBoard";
-import { ProfilePage } from "../components/pages/ProfilePage";
-import { RegisterPage } from "../components/pages/RegisterPage";
+import { ProfilePage } from "../pages/ProfilePage";
+import { RegisterPage } from "../pages/RegisterPage";
 import { AuthForm } from "../components/AuthForm";
 import Layout from "../components/Layout/Layout";
-import { HomePage } from "../components/pages/HomePage";
-import { ProductPage } from "../components/pages/ProductPage";
-import { HelpPage } from "../components/pages/HelpPage";
+import { HomePage } from "../pages/HomePage";
+import { ProductPage } from "../pages/ProductPage";
+import { HelpPage } from "../pages/HelpPage";
+import { CatalogPage } from "../pages/CatalogPage";
 
 const ProtectedRoute: React.FC<{
     isAuth: boolean;
@@ -92,6 +93,15 @@ export const AppRouter: React.FC = () => {
 
                 <Route
                     path="/catalog"
+                    element={
+                        <Layout>
+                            <CatalogPage />
+                        </Layout>
+                    }
+                />
+
+                <Route
+                    path="/catalog/:type"
                     element={
                         <Layout>
                             <ProductPage />
